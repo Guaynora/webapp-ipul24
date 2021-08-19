@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import AuthHelper from "../helpers/AuthHelper";
 
@@ -6,11 +7,12 @@ function FormLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { setToken } = useContext(AuthContext);
+  let history = useHistory();
 
   const form = (e) => {
     e.preventDefault();
     console.log("click");
-    AuthHelper(email, password, setToken);
+    AuthHelper(email, password, setToken, history);
   };
 
   return (

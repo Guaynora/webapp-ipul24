@@ -1,6 +1,6 @@
 const url = "http://localhost:1337/auth/local";
 
-function AuthHelper(email, password, setToken) {
+function AuthHelper(email, password, setToken, history) {
   fetch(url, {
     method: "POST",
     headers: {
@@ -18,6 +18,7 @@ function AuthHelper(email, password, setToken) {
     .then((data) => {
       setToken(data.jwt);
       console.log(data);
+      history.push("/");
     })
     .catch((error) => {
       console.log(error);
