@@ -19,3 +19,15 @@
   width: 200px;
   margin-bottom: 50px;
 }
+
+/******* navigation ******************/
+.nav {
+  background: #18202e;
+  color: #424b59;
+  width: 240px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}

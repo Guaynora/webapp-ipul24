@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Redirect } from "react-router-dom";
+import Nav from "../components/Nav";
 import AuthContext from "../context/AuthContext";
 
 function Home() {
@@ -9,7 +10,7 @@ function Home() {
   }
   return (
     <div>
-      <h2>Home</h2>
+      <Nav />
     </div>
   );
 }
