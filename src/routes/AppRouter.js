@@ -8,7 +8,7 @@ import Nav from "../components/Nav";
 
 function AppRouter(params) {
   return (
-    <>
+    <div className="main">
       <Router>
         <Nav />
         <Switch>
@@ -19,7 +19,7 @@ function AppRouter(params) {
           <Route exact path="/" component={Home} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 

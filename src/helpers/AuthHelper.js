@@ -12,12 +12,10 @@ function AuthHelper(email, password, setToken, history) {
     }),
   })
     .then((response) => {
-      console.log(response);
       return response.json();
     })
     .then((data) => {
       setToken(data.jwt);
-      console.log(data);
       history.push("/");
     })
     .catch((error) => {

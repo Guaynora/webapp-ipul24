@@ -50,3 +50,9 @@ h1 {
 .active {
   color: #eeeeef;
 }
+
+/***** members ******/
+.main {
+  display: flex;
+  flex-direction: row;
+}
