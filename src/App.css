@@ -17,17 +17,36 @@
 
 .logoipul24 {
   width: 200px;
-  margin-bottom: 50px;
 }
 
 /******* navigation ******************/
 .nav {
   background: #18202e;
-  color: #424b59;
   width: 240px;
+  height: 100vh;
+}
+
+.nav-header {
+  padding: 15px;
+  background: #6889be;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  margin: 30px;
+}
+
+.menu-a {
+  color: #515b6b;
+  margin: 10px 0;
+}
+
+.active {
+  color: #eeeeef;
 }

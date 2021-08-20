@@ -1,13 +1,13 @@
 import "./App.css";
 import "bulma/css/bulma.min.css";
 import { AuthProvider } from "./context/AuthContext";
-import RoutLogin from "./routes/RoutLogin";
+import AppRouter from "./routes/AppRouter";
 
 function App() {
   return (
     <>
       <AuthProvider>
-        <RoutLogin />
+        <AppRouter />
       </AuthProvider>
     </>
   );
