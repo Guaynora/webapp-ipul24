@@ -51,8 +51,20 @@ h1 {
   color: #eeeeef;
 }
 
-/***** members ******/
+/***** main ******/
 .main {
   display: flex;
   flex-direction: row;
+}
+
+/*** members ****/
+
+.title-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table-container {
+  width: 100%;
 }

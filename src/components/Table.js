@@ -2,14 +2,16 @@ import RowTable from "./RowTable";
 
 function Table({ members }) {
   return (
-    <table className="table is-fullwidth">
+    <table className="table is-fullwidth is-striped">
       <thead>
         <tr>
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Identificacion</th>
           <th>Fecha de nacimiento</th>
+          <th>Dirección</th>
           <th>Bautizado</th>
+          <th>Opción</th>
         </tr>
       </thead>
       <tbody>

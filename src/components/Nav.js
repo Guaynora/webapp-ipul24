@@ -12,7 +12,7 @@ function Nav() {
         <nav className="nav">
           <div className="nav-header">
             <img src={logo} alt="logo ipul24" className="logoipul24" />
-            <h1>IPUL 24 DE DICIEMBRE</h1>
+            <h1 className="title is-6 has-text-white	">IPUL 24 DE DICIEMBRE</h1>
           </div>
           <div className="menu">
             <NavLink
