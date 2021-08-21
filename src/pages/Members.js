@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import AddButton from "../components/AddButton";
 import Table from "../components/Table";
+import TopComponent from "../components/TopComponent";
 import AuthContext from "../context/AuthContext";
 
 function Members() {
@@ -34,8 +35,9 @@ function Members() {
 
   return (
     <section className="container">
-      <div className="title-button mx-6 mt-6">
-        <h3 className="title is-4">Miembros</h3>
+      <TopComponent />
+      <div className="title-button mx-6 mt-4">
+        <h3 className="title is-4 m-0">Miembros</h3>
         <AddButton text="Agregar miembro" />
       </div>
 
