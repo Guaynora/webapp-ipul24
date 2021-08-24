@@ -38,7 +38,7 @@ function Members() {
       <TopComponent />
       <div className="title-button mx-6 mt-4">
         <h3 className="title is-4 m-0">Miembros</h3>
-        <AddButton text="Agregar miembro" />
+        <AddButton text="miembro" />
       </div>
 
       <div className="table-container p-6">
