@@ -3,6 +3,7 @@ import AddButton from "../components/AddButton";
 import Table from "../components/Table";
 import TopComponent from "../components/TopComponent";
 import AuthContext from "../context/AuthContext";
+import { Redirect } from "react-router-dom";
 
 function Members() {
   const [members, setMembers] = useState([]);
@@ -33,6 +34,10 @@ function Members() {
     getData(url);
   }, []);
 
+  if (!token) {
+    return <Redirect to="/login" />;
+  }
+
   return (
     <section className="container">
       <TopComponent back={false} />
@@ -42,7 +47,7 @@ function Members() {
       </div>
 
       <div className="table-container p-6">
-        <Table members={members} />
+        <Table datas={members} type="member" />
       </div>
     </section>
   );

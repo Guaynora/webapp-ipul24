@@ -7,7 +7,7 @@ function AddButton({ text }) {
   const textButton = {
     miembro: "Agregar miembro",
     ofrenda: "Agregar ofrenda",
-    diezmo: "agregar diezmo",
+    diezmo: "Agregar diezmo",
   };
 
   const pushUrl = {
