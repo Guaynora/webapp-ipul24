@@ -35,7 +35,7 @@ function Members() {
 
   return (
     <section className="container">
-      <TopComponent />
+      <TopComponent back={false} />
       <div className="title-button mx-6 mt-4">
         <h3 className="title is-4 m-0">Miembros</h3>
         <AddButton text="miembro" />
