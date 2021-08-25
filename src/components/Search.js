@@ -5,7 +5,7 @@ function Search() {
     <p className="control has-icons-left">
       <input className="input" type="text" placeholder="Buscar" />
       <span className="icon is-left">
-        <i class="fas fa-search" aria-hidden="true"></i>
+        <i className="fas fa-search" aria-hidden="true"></i>
       </span>
     </p>
   );
