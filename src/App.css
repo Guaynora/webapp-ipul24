@@ -66,11 +66,27 @@ h1 {
   align-content: center;
 }
 
-.table-container {
+.table-container,
+.form-container {
   width: 100%;
 }
 
 .topComponent {
   display: flex;
   flex-direction: row;
+}
+
+.form-member {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem 4rem;
+}
+
+.form-subtmit {
+  position: relative;
+}
+
+.submitBtn {
+  position: absolute;
+  right: 0;
 }
