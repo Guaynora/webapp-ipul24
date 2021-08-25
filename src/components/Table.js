@@ -1,22 +1,17 @@
+import HeadTable from "./HeadTable";
 import RowTable from "./RowTable";
 
-function Table({ members }) {
+function Table({ datas, type }) {
   return (
     <table className="table is-fullwidth is-striped">
       <thead>
         <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Identificacion</th>
-          <th>Fecha de nacimiento</th>
-          <th>Dirección</th>
-          <th>Bautizado</th>
-          <th>Opción</th>
+          <HeadTable type={type} />
         </tr>
       </thead>
       <tbody>
-        {members.length > 0 ? (
-          members.map((el) => <RowTable member={el} key={el.id} />)
+        {datas.length > 0 ? (
+          datas.map((el) => <RowTable data={el} key={el.id} type={type} />)
         ) : (
           <tr>
             <td colSpan="3">Sin datos</td>

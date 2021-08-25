@@ -1,25 +1,48 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
+import EditButton from "./EditButton";
 
-function RowTable({ member }) {
-  const { name, lastname, identification, dateofbird, baptized, direction } =
-    member;
-  console.log(name);
+function RowTable({ data, type }) {
+  const Member = () => {
+    const { name, lastname, identification, dateofbird, baptized, direction } =
+      data;
+    return (
+      <>
+        <td>{name}</td>
+        <td>{lastname}</td>
+        <td>{identification}</td>
+        <td>{dateofbird}</td>
+        <td>{direction.directionName}</td>
+        {baptized ? <td>Si</td> : <td>No</td>}
+      </>
+    );
+  };
+
+  const Tithe = () => {
+    const { member, date, amount } = data;
+    return (
+      <>
+        <td>{member.name}</td>
+        <td>{member.lastname}</td>
+        <td>{amount}</td>
+        <td>{date}</td>
+      </>
+    );
+  };
+
+  const typeData = {
+    member: <Member />,
+    tithe: <Tithe />,
+  };
+
+  console.log(data);
+  console.log(type);
   return (
     <tr>
-      <td>{name}</td>
-      <td>{lastname}</td>
-      <td>{identification}</td>
-      <td>{dateofbird}</td>
-      {direction ? <td>{direction.directionName}</td> : <td>No registrado</td>}
-
-      {baptized ? <td>Si</td> : <td>No</td>}
+      {typeData[type]}
       <td>
-        <span className="icon has-text-success mr-2">
-          <i className="far fa-lg fa-edit"></i>
-        </span>
-        <span className="icon has-text-danger">
-          <i className="far fa-lg fa-trash-alt"></i>
-        </span>
+        <EditButton />
+        <DeleteButton />
       </td>
     </tr>
   );
