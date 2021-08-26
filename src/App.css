@@ -82,10 +82,6 @@ h1 {
   grid-gap: 2rem 4rem;
 }
 
-.form-subtmit {
-  position: relative;
-}
-
 .submitBtn {
   position: absolute;
   right: 0;
