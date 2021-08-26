@@ -53,9 +53,6 @@ function FormMember() {
           </div>
         </div>
       </div>
-      <div className="form-Submit">
-        <SubmitButton />
-      </div>
     </form>
   );
 }

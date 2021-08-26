@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import Tithe from "../pages/Tithe";
 import Nav from "../components/Nav";
 import AddMember from "../pages/AddMember";
+import AddTithe from "../pages/AddTithe";
 
 function AppRouter(params) {
   return (
@@ -13,6 +14,7 @@ function AppRouter(params) {
       <Router>
         <Nav />
         <Switch>
+          <Route exact path="/tithe/addtithe" component={AddTithe} />
           <Route exact path="/members/addmember" component={AddMember} />
           <Route exact path="/dasboard" component={Dashboard} />
           <Route exact path="/members" component={Members} />
