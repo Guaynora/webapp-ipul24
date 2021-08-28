@@ -1,5 +1,5 @@
-import { useState } from "react";
 import useForm from "../hooks/useForm";
+import LoadingButton from "./LoadingButton";
 import Message from "./Message";
 import SubmitButton from "./SubmitButton";
 
@@ -19,10 +19,13 @@ function FormMember({ data }) {
   );
 
   return (
-    <form className="container-form" onSubmit={handleSubmit}>
+    <form
+      className="container-form"
+      onSubmit={(e) => handleSubmit(e, "member")}
+    >
       <div className="title-button mx-6 mt-4">
         <h3 className="title is-4 m-0">Agregar miembro</h3>
-        <SubmitButton />
+        {loading ? <LoadingButton /> : <SubmitButton />}
       </div>
       <div className="form-member form-container p-6">
         <div className="field">

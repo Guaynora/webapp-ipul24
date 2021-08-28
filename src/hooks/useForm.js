@@ -9,6 +9,11 @@ function useForm(initialForm, postType) {
   const [response, setResponse] = useState(false);
   const { token } = useContext(AuthContext);
 
+  const urls = {
+    member: "http://localhost:1337/members",
+    tithe: "http://localhost:1337/tithes",
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({
@@ -17,15 +22,13 @@ function useForm(initialForm, postType) {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, url) => {
     e.preventDefault();
-    console.log(token);
-    console.log(form);
-    console.log(JSON.stringify(form));
+    console.log(urls[url]);
     const post = async (url) => {
       try {
         setLoading(true);
-        let res = await fetch(url, {
+        let res = await fetch(urls[url], {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -44,13 +47,13 @@ function useForm(initialForm, postType) {
         setLoading(false);
         setResponse(true);
         setForm(initialForm);
-        setTimeout(() => setResponse(false), 5000);
+        setTimeout(() => setResponse(false), 3000);
       } catch (error) {
         console.log(error);
       }
     };
 
-    post(urlMember);
+    post(url);
   };
 
   return { form, handleChange, handleSubmit, loading, response };
