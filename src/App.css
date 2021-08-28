@@ -86,3 +86,18 @@ h1 {
   position: absolute;
   right: 0;
 }
+
+.container-form {
+  position: relative;
+}
+
+.success {
+  padding: 10px;
+  width: fit-content;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

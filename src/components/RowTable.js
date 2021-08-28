@@ -35,8 +35,6 @@ function RowTable({ data, type }) {
     tithe: <Tithe />,
   };
 
-  console.log(data);
-  console.log(type);
   return (
     <tr>
       {typeData[type]}

@@ -1,5 +1,4 @@
 import React from "react";
-import SubmitButton from "./SubmitButton";
 
 function FormTithe({ data }) {
   const form = (e) => {

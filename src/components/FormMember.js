@@ -1,58 +1,115 @@
-import React from "react";
+import { useState } from "react";
+import useForm from "../hooks/useForm";
+import Message from "./Message";
 import SubmitButton from "./SubmitButton";
 
-function FormMember() {
-  const form = (e) => {
-    e.preventDefault();
-    console.log("enviado");
-  };
+const initialForm = {
+  name: "",
+  lastname: "",
+  dateofbird: "",
+  identification: "",
+  baptized: "",
+  direction: "",
+};
+
+function FormMember({ data }) {
+  const { form, loading, response, handleChange, handleSubmit } = useForm(
+    initialForm,
+    "member"
+  );
+
   return (
-    <form className="container-form" onSubmit={form}>
-      <div className="form-member">
+    <form className="container-form" onSubmit={handleSubmit}>
+      <div className="title-button mx-6 mt-4">
+        <h3 className="title is-4 m-0">Agregar miembro</h3>
+        <SubmitButton />
+      </div>
+      <div className="form-member form-container p-6">
         <div className="field">
           <label className="label">Nombre</label>
           <div className="control">
-            <input className="input" type="text" placeholder="ejemplo" />
+            <input
+              className="input"
+              type="text"
+              name="name"
+              onChange={handleChange}
+            />
           </div>
         </div>
         <div className="field">
           <label className="label">Apellido</label>
           <div className="control">
-            <input className="input" type="text" placeholder="ejemplo" />
+            <input
+              className="input"
+              type="text"
+              name="lastname"
+              onChange={handleChange}
+            />
           </div>
         </div>
         <div className="field">
           <label className="label">Identificacion</label>
           <div className="control">
-            <input className="input" type="text" placeholder="8-100-000" />
+            <input
+              className="input"
+              type="text"
+              placeholder="8-100-000"
+              name="identification"
+              onChange={handleChange}
+            />
           </div>
         </div>
         <div className="field">
           <label className="label">Fecha de nacimiento</label>
           <div className="control">
-            <input className="input" type="date" />
+            <input
+              className="input"
+              type="date"
+              name="dateofbird"
+              onChange={handleChange}
+            />
           </div>
         </div>
         <div className="field">
-          <label className="label">Direccion</label>
-          <div className="control">
-            <input className="input" type="text" />
+          <label className="label">Miembro</label>
+          <div className="select">
+            <select name="direction" onChange={handleChange}>
+              {data.map((el) => (
+                <option
+                  key={el.id}
+                  value={el.id}
+                >{`${el.directionName}`}</option>
+              ))}
+            </select>
           </div>
         </div>
         <div className="field">
           <label className="label">Bautizado</label>
           <div className="control">
             <label className="radio mr-5">
-              <input type="radio" name="answer" className="mr-2" />
+              <input
+                type="radio"
+                name="baptized"
+                className="mr-2"
+                value="true"
+                onChange={handleChange}
+              />
               Si
             </label>
             <label className="radio">
-              <input type="radio" name="answer" className="mr-2" />
+              <input
+                type="radio"
+                name="baptized"
+                className="mr-2"
+                value="false"
+                onChange={handleChange}
+              />
               No
             </label>
           </div>
         </div>
       </div>
+      {response && <Message msg="Agregado correctamente" />}
     </form>
   );
 }
