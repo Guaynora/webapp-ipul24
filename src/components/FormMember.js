@@ -1,3 +1,4 @@
+import useDirections from "../hooks/useDirections";
 import useForm from "../hooks/useForm";
 import LoadingButton from "./LoadingButton";
 import Message from "./Message";
@@ -12,11 +13,13 @@ const initialForm = {
   direction: "",
 };
 
-function FormMember({ data }) {
+function FormMember() {
   const { form, loading, response, handleChange, handleSubmit } = useForm(
     initialForm,
     "member"
   );
+
+  const { directions } = useDirections();
 
   return (
     <form
@@ -77,7 +80,7 @@ function FormMember({ data }) {
           <label className="label">Miembro</label>
           <div className="select">
             <select name="direction" onChange={handleChange}>
-              {data.map((el) => (
+              {directions.map((el) => (
                 <option
                   key={el.id}
                   value={el.id}
