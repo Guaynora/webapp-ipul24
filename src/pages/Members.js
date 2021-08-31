@@ -1,38 +1,15 @@
-import { useEffect, useState, useContext } from "react";
+import { useContext } from "react";
 import AddButton from "../components/AddButton";
 import Table from "../components/Table";
 import TopComponent from "../components/TopComponent";
 import AuthContext from "../context/AuthContext";
 import { Redirect } from "react-router-dom";
+import useMembers from "../hooks/useMembers";
 
 function Members() {
-  const [members, setMembers] = useState([]);
   const { token } = useContext(AuthContext);
-  //let { data, isPending } = useMembers();
 
-  useEffect(() => {
-    let url = "http://localhost:1337/members";
-    const getData = async (url) => {
-      try {
-        let res = await fetch(url, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-
-        if (!res.ok) {
-          throw new Error({
-            err: true,
-            status: res.status,
-            statusText: !res.status.Text ? "ocurrio un error" : res.statusText,
-          });
-        }
-        let data = await res.json();
-        setMembers(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getData(url);
-  }, []);
+  const { members } = useMembers();
 
   if (!token) {
     return <Redirect to="/login" />;

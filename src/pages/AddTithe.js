@@ -1,36 +1,14 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import FormTithe from "../components/FormTithe";
 import SubmitButton from "../components/SubmitButton";
 import TopComponent from "../components/TopComponent";
 import AuthContext from "../context/AuthContext";
+import useMembers from "../hooks/useMembers";
 
 function AddTithe() {
-  const [members, setMembers] = useState([]);
   const { token } = useContext(AuthContext);
 
-  useEffect(() => {
-    let url = "http://localhost:1337/members";
-    const getData = async (url) => {
-      try {
-        let res = await fetch(url, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-
-        if (!res.ok) {
-          throw new Error({
-            err: true,
-            status: res.status,
-            statusText: !res.status.Text ? "ocurrio un error" : res.statusText,
-          });
-        }
-        let data = await res.json();
-        setMembers(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getData(url);
-  }, []);
+  const { members } = useMembers();
 
   return (
     <section className="container">
