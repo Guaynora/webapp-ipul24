@@ -11,7 +11,6 @@ function FormLogin() {
 
   const form = (e) => {
     e.preventDefault();
-    console.log("click");
     AuthHelper(email, password, setToken, history);
   };
 
