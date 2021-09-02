@@ -18,7 +18,7 @@ function HeadTable({ type }) {
     tithe: tableTithe,
   };
 
-  return TypeTable[type].map((el) => <th key={el.id}>{el}</th>);
+  return TypeTable[type].map((el, index) => <th key={index}>{el}</th>);
 }
 
 export default HeadTable;

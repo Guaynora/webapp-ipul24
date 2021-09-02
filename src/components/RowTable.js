@@ -39,8 +39,8 @@ function RowTable({ data, type }) {
     <tr>
       {typeData[type]}
       <td>
-        <EditButton />
-        <DeleteButton />
+        <EditButton type={type} data={data} />
+        <DeleteButton type={type} data={data} />
       </td>
     </tr>
   );
