@@ -1,10 +1,9 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 
 function useForm(initialForm, postType) {
-  const urlMember = "http://localhost:1337/members";
-  const urlTithe = "http://localhost:1337/tithes";
   const [form, setForm] = useState(initialForm);
+  const [edit, setEdit] = useState([]);
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(false);
   const { token } = useContext(AuthContext);
@@ -56,7 +55,23 @@ function useForm(initialForm, postType) {
     post(url);
   };
 
-  return { form, handleChange, handleSubmit, loading, response };
+  const handleEdit = (info) => {
+    setEdit(info);
+  };
+
+  useEffect(() => {
+    console.log("useEffect useForm");
+    if (edit.length !== 0) {
+      console.log("se agrego edit", edit);
+      setForm(edit);
+      console.log("form", form);
+    } else {
+      console.log("se seteo el form");
+      setForm(initialForm);
+    }
+  }, [edit]);
+
+  return { form, handleChange, handleSubmit, handleEdit, loading, response };
 }
 
 export default useForm;
