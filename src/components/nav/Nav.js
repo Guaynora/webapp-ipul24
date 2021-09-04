@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import AuthContext from "../context/AuthContext";
-import logo from "../img/Logo.png";
+import AuthContext from "../../context/AuthContext";
+import logo from "../../img/Logo.png";
 
 function Nav() {
   const { token } = useContext(AuthContext);

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import TopComponent from "../components/TopComponent";
+import TopComponent from "../components/navTop/TopComponent";
 import UpdateMember from "../components/UpdateMember";
 import useDataId from "../hooks/useDataId";
 

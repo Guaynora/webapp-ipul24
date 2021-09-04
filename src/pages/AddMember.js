@@ -1,5 +1,5 @@
-import FormMember from "../components/FormMember";
-import TopComponent from "../components/TopComponent";
+import FormMember from "../components/form/FormMember";
+import TopComponent from "../components/navTop/TopComponent";
 
 function AddMember() {
   return (

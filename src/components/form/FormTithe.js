@@ -17,7 +17,7 @@ function FormTithe({ data }) {
         </div>
         <div className="field">
           <label className="label">Miembro</label>
-          <div class="select">
+          <div className="select">
             <select>
               <option>Desconocido</option>
               {data.map((el) => (

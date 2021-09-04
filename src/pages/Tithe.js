@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
-import AddButton from "../components/AddButton";
-import Table from "../components/Table";
-import TopComponent from "../components/TopComponent";
+import AddButton from "../components/button/AddButton";
+import Table from "../components/table/Table";
+import TopComponent from "../components/navTop/TopComponent";
 import AuthContext from "../context/AuthContext";
 import { Redirect } from "react-router-dom";
 

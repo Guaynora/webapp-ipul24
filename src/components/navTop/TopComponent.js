@@ -1,6 +1,6 @@
 import React from "react";
-import BackButton from "./BackButton";
-import ProfileButton from "./ProfileButton";
+import BackButton from "../button/BackButton";
+import ProfileButton from "../button/ProfileButton";
 import Search from "./Search";
 
 function TopComponent({ back }) {

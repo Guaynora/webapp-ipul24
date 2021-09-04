@@ -1,4 +1,4 @@
-import FormLogin from "../components/FormLogin";
+import FormLogin from "../components/form/FormLogin";
 import logo from "../img/Logo.png";
 
 function Login() {

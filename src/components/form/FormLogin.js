@@ -1,6 +1,6 @@
 import { useState } from "react";
-import useLogin from "../hooks/useLogin";
-import LoadingButton from "./LoadingButton";
+import useLogin from "../../hooks/useLogin";
+import LoadingButton from "../button/LoadingButton";
 
 function FormLogin() {
   const [email, setEmail] = useState("");

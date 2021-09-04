@@ -1,8 +1,8 @@
-import useDirections from "../hooks/useDirections";
-import useForm from "../hooks/useForm";
-import LoadingButton from "./LoadingButton";
-import Message from "./Message";
-import SubmitButton from "./SubmitButton";
+import useDirections from "../../hooks/useDirections";
+import useForm from "../../hooks/useForm";
+import LoadingButton from "../button/LoadingButton";
+import Message from "../Message";
+import SubmitButton from "../button/SubmitButton";
 
 const initialForm = {
   name: "",

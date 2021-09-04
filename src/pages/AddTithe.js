@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import FormTithe from "../components/FormTithe";
-import SubmitButton from "../components/SubmitButton";
-import TopComponent from "../components/TopComponent";
+import FormTithe from "../components/form/FormTithe";
+import SubmitButton from "../components/button/SubmitButton";
+import TopComponent from "../components/navTop/TopComponent";
 import AuthContext from "../context/AuthContext";
 import useMembers from "../hooks/useMembers";
 
