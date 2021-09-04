@@ -1,9 +1,17 @@
 import React from "react";
 
-function LoadingButton() {
-  return (
-    <button className="button is-loading is-rounded is-info">Loading</button>
-  );
+function LoadingButton({ type }) {
+  if (type === "login") {
+    return (
+      <button className="button is-loading is-rounded is-success">
+        Loading
+      </button>
+    );
+  } else {
+    return (
+      <button className="button is-loading is-rounded is-info">Loading</button>
+    );
+  }
 }
 
 export default LoadingButton;

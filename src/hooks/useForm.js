@@ -49,6 +49,7 @@ function useForm(initialForm, postType) {
         setTimeout(() => setResponse(false), 3000);
       } catch (error) {
         console.log(error);
+        setLoading(false);
       }
     };
 
@@ -62,11 +63,8 @@ function useForm(initialForm, postType) {
   useEffect(() => {
     console.log("useEffect useForm");
     if (edit.length !== 0) {
-      console.log("se agrego edit", edit);
       setForm(edit);
-      console.log("form", form);
     } else {
-      console.log("se seteo el form");
       setForm(initialForm);
     }
   }, [edit]);
