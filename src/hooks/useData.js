@@ -1,16 +1,17 @@
 import { useState, useEffect, useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
-function useMembers() {
-  const [members, setMembers] = useState([]);
+function useData(url) {
+  const [data, setData] = useState([]);
   const { token } = useContext(AuthContext);
 
   useEffect(() => {
-    let url = "http://localhost:1337/members";
+    const controller = new AbortController();
     const getData = async (url) => {
       try {
         let res = await fetch(url, {
           headers: { Authorization: `Bearer ${token}` },
+          signal: controller.signal,
         });
 
         if (!res.ok) {
@@ -21,15 +22,16 @@ function useMembers() {
           });
         }
         let data = await res.json();
-        setMembers(data);
+        setData(data);
       } catch (error) {
         console.log(error);
       }
     };
     getData(url);
-  }, []);
+    return () => controller.abort();
+  }, [data]);
 
-  return { members };
+  return { data };
 }
 
-export default useMembers;
+export default useData;

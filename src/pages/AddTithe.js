@@ -1,14 +1,19 @@
 import { useContext } from "react";
+import { Redirect } from "react-router-dom";
 import FormTithe from "../components/form/FormTithe";
 import SubmitButton from "../components/button/SubmitButton";
 import TopComponent from "../components/navTop/TopComponent";
 import AuthContext from "../context/AuthContext";
-import useMembers from "../hooks/useMembers";
+import useData from "../hooks/useData";
 
 function AddTithe() {
   const { token } = useContext(AuthContext);
 
-  const { members } = useMembers();
+  const { data } = useData("http://localhost:1337/members");
+
+  if (!token) {
+    return <Redirect to="/login" />;
+  }
 
   return (
     <section className="container">
@@ -18,7 +23,7 @@ function AddTithe() {
         <SubmitButton />
       </div>
       <div className="form-container p-6">
-        <FormTithe data={members} />
+        <FormTithe data={data} />
       </div>
     </section>
   );

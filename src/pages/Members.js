@@ -4,12 +4,12 @@ import Table from "../components/table/Table";
 import TopComponent from "../components/navTop/TopComponent";
 import AuthContext from "../context/AuthContext";
 import { Redirect } from "react-router-dom";
-import useMembers from "../hooks/useMembers";
+import useData from "../hooks/useData";
 
 function Members() {
   const { token } = useContext(AuthContext);
 
-  const { members } = useMembers();
+  const { data } = useData("http://localhost:1337/members");
 
   if (!token) {
     return <Redirect to="/login" />;
@@ -24,7 +24,7 @@ function Members() {
       </div>
 
       <div className="table-container p-6">
-        <Table datas={members} type="member" />
+        <Table datas={data} type="member" />
       </div>
     </section>
   );
