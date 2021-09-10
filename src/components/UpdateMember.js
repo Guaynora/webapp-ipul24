@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import useDirections from "../hooks/useDirections";
 import useForm from "../hooks/useForm";
+import LoadingButton from "./button/LoadingButton";
+import SubmitButton from "./button/SubmitButton";
 import Message from "./Message";
 
 function UpdateMember({ info }) {
@@ -16,7 +18,7 @@ function UpdateMember({ info }) {
     },
   };
 
-  const { form, loading, response, handleChange, handleSubmit, handleEdit } =
+  const { form, loading, response, handleChange, handleUpdate, handleEdit } =
     useForm(initialForm, "member");
 
   const { directions } = useDirections();
@@ -27,9 +29,13 @@ function UpdateMember({ info }) {
   }, [info]);
 
   return (
-    <form className="container-form">
+    <form
+      className="container-form"
+      onSubmit={(e) => handleUpdate(e, "member")}
+    >
       <div className="title-button mx-6 mt-4">
         <h3 className="title is-4 m-0">Actualizar miembro</h3>
+        {loading ? <LoadingButton /> : <SubmitButton />}
       </div>
       <div className="form-member form-container p-6">
         <div className="field">
