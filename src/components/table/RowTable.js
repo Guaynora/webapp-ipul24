@@ -12,7 +12,7 @@ function RowTable({ data, type }) {
         <td>{lastname}</td>
         <td>{identification}</td>
         <td>{dateofbird}</td>
-        <td>{direction.directionName}</td>
+        {direction && <td>{direction.directionName}</td>}
         {baptized ? <td>Si</td> : <td>No</td>}
       </>
     );

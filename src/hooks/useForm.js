@@ -8,6 +8,8 @@ function useForm(initialForm) {
   const [response, setResponse] = useState(false);
   const { token } = useContext(AuthContext);
 
+  const controller = new AbortController();
+
   const urls = {
     member: "http://localhost:1337/members",
     tithe: "http://localhost:1337/tithes",
@@ -42,6 +44,7 @@ function useForm(initialForm) {
           method: "POST",
           headers,
           body: JSON.stringify(form),
+          signal: controller.signal,
         });
         if (!res.ok) {
           throw new Error({
@@ -72,6 +75,7 @@ function useForm(initialForm) {
           method: "PUT",
           headers,
           body: JSON.stringify(form),
+          signal: controller.signal,
         });
         if (!res.ok) {
           throw new Error({
@@ -102,6 +106,7 @@ function useForm(initialForm) {
     } else {
       setForm(initialForm);
     }
+    return () => controller.abort();
   }, [edit]);
 
   return {
