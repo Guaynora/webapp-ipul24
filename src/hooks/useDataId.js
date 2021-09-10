@@ -7,6 +7,7 @@ function useDataId(url, type, id) {
   const { token } = useContext(AuthContext);
 
   const getData = async (url, type, id) => {
+    console.log('id url', id);
     try {
       let res = await fetch(`${url}/${type}/${id}`, {
         headers: { Authorization: `Bearer ${token}` },

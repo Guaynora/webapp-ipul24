@@ -1,9 +1,7 @@
 import { useEffect } from "react";
-import { useParams } from "react-router";
 import useDirections from "../hooks/useDirections";
 import useForm from "../hooks/useForm";
 import Message from "./Message";
-import useDataId from "../hooks/useDataId";
 
 function UpdateMember({ info }) {
   const initialForm = {
@@ -18,12 +16,6 @@ function UpdateMember({ info }) {
     },
   };
 
-  let { id } = useParams();
-
-  let url = "http://localhost:1337";
-
-  const { data } = useDataId(url, "members", id);
-
   const { form, loading, response, handleChange, handleSubmit, handleEdit } =
     useForm(initialForm, "member");
 
@@ -31,8 +23,8 @@ function UpdateMember({ info }) {
 
   useEffect(() => {
     console.log("useEffect updateMember");
-    handleEdit(data);
-  }, [data]);
+    handleEdit(info);
+  }, [info]);
 
   return (
     <form className="container-form">

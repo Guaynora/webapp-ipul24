@@ -1,10 +1,10 @@
 import { useHistory } from "react-router-dom";
 
-function EditButton({ type, data }) {
+function EditButton({ type, id }) {
   let history = useHistory();
   const urls = {
-    member: `/member/${data.id}`,
-    tithe: `/tithe/${data.id}`,
+    member: `/member/${id}`,
+    tithe: `/tithe/${id}`,
   };
 
   const Update = (e) => {
