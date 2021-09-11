@@ -18,13 +18,8 @@ function AddTithe() {
   return (
     <section className="container">
       <TopComponent back={true} />
-      <div className="title-button mx-6 mt-4">
-        <h3 className="title is-4 m-0">Agregar Diezmo</h3>
-        <SubmitButton />
-      </div>
-      <div className="form-container p-6">
-        <FormTithe data={data} />
-      </div>
+
+      <FormTithe data={data} />
     </section>
   );
 }
