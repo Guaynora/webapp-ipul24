@@ -7,15 +7,15 @@ import Tithe from "../pages/Tithe";
 import Nav from "../components/nav/Nav";
 import AddMember from "../pages/AddMember";
 import AddTithe from "../pages/AddTithe";
-import InfoMember from "../pages/InfoMember";
+import Info from "../pages/Info";
 
-function AppRouter(params) {
+function AppRouter() {
   return (
     <div className="main">
       <Router>
         <Nav />
         <Switch>
-          <Route exact path="/member/:id" component={InfoMember} />
+          <Route exact path="/:type/:id" component={Info} />
           <Route exact path="/tithe/addtithe" component={AddTithe} />
           <Route exact path="/members/addmember" component={AddMember} />
           <Route exact path="/dasboard" component={Dashboard} />

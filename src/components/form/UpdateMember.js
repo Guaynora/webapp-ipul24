@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import useDirections from "../hooks/useDirections";
-import useForm from "../hooks/useForm";
-import LoadingButton from "./button/LoadingButton";
-import SubmitButton from "./button/SubmitButton";
-import Message from "./Message";
+import useDirections from "../../hooks/useDirections";
+import useForm from "../../hooks/useForm";
+import LoadingButton from "../button/LoadingButton";
+import SubmitButton from "../button/SubmitButton";
+import Message from "../Message";
 
 function UpdateMember({ info }) {
   const initialForm = {
