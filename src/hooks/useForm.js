@@ -36,6 +36,7 @@ function useForm(initialForm) {
 
   const handleSubmit = (e, type) => {
     e.preventDefault();
+    console.log(form);
 
     const post = async (type) => {
       try {

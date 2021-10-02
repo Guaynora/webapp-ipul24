@@ -15,8 +15,8 @@ function AppRouter() {
       <Router>
         <Nav />
         <Switch>
-          <Route exact path="/:type/:id" component={Info} />
-          <Route exact path="/tithe/addtithe" component={AddTithe} />
+          <Route exact path="/info/:type/:id" component={Info} />
+          <Route exact path="/tithes/addtithe" component={AddTithe} />
           <Route exact path="/members/addmember" component={AddMember} />
           <Route exact path="/dasboard" component={Dashboard} />
           <Route exact path="/members" component={Members} />
