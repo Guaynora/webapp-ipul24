@@ -15,12 +15,7 @@ function Nav() {
             <h1 className="title is-6 has-text-white	">IPUL 24 DE DICIEMBRE</h1>
           </div>
           <div className="menu">
-            <NavLink
-              exact
-              to="/dashboard"
-              activeClassName="active"
-              className="menu-a"
-            >
+            <NavLink exact to="/" activeClassName="active" className="menu-a">
               Dashboard
             </NavLink>
             <NavLink

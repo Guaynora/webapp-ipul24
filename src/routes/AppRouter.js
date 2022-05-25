@@ -18,7 +18,6 @@ function AppRouter() {
           <Route exact path="/info/:type/:id" component={Info} />
           <Route exact path="/tithes/addtithe" component={AddTithe} />
           <Route exact path="/members/addmember" component={AddMember} />
-          <Route exact path="/dasboard" component={Dashboard} />
           <Route exact path="/members" component={Members} />
           <Route exact path="/tithe" component={Tithe} />
           <Route exact path="/login" component={Login} />
