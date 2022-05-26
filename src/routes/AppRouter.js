@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Members from "../pages/Members";
-import Dashboard from "../pages/Dashboard";
 import Tithe from "../pages/Tithe";
 import Nav from "../components/nav/Nav";
 import AddMember from "../pages/AddMember";
