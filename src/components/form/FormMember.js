@@ -14,7 +14,7 @@ const initialForm = {
 };
 
 function FormMember() {
-  const { form, loading, response, handleChange, handleSubmit } = useForm(
+  const { loading, response, handleChange, handleSubmit } = useForm(
     initialForm,
     "member"
   );
@@ -77,9 +77,12 @@ function FormMember() {
           </div>
         </div>
         <div className="field">
-          <label className="label">Miembro</label>
+          <label className="label">Direccion</label>
           <div className="select">
             <select name="direction" onChange={handleChange}>
+              <option key="blankChoise" hidden value>
+                Seleccione
+              </option>
               {directions.map((el) => (
                 <option
                   key={el.id}
