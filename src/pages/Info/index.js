@@ -1,8 +1,8 @@
 import { useParams } from "react-router";
-import TopComponent from "../components/navTop/TopComponent";
-import UpdateMember from "../components/form/UpdateMember";
-import UpdateTithe from "../components/form/UpdateTithe";
-import useDataId from "../hooks/useDataId";
+import TopComponent from "../../components/navTop/TopComponent";
+import UpdateMember from "../../components/form/UpdateMember";
+import UpdateTithe from "../../components/form/UpdateTithe";
+import useDataId from "../../hooks/useDataId";
 
 function Info() {
   let { type, id } = useParams();

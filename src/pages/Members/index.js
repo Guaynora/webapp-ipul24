@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import AddButton from "../components/button/AddButton";
-import Table from "../components/table/Table";
-import TopComponent from "../components/navTop/TopComponent";
-import AuthContext from "../context/AuthContext";
+import AddButton from "../../components/button/AddButton";
+import Table from "../../components/table/Table";
+import TopComponent from "../../components/navTop/TopComponent";
+import AuthContext from "../../context/AuthContext";
 import { Redirect } from "react-router-dom";
-import useData from "../hooks/useData";
+import useData from "../../hooks/useData";
 
 function Members() {
   const { token } = useContext(AuthContext);

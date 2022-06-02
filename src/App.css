@@ -5,10 +5,24 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  background-color: #738bea;
 }
 
+.cardLogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba(0,0,0, 0.2);
+  margin: 15rem;
+  padding: 2rem;
+  backdrop-filter: blur(1rem);
+  background-color: rgba(255, 255, 255, 0.060);
+  border: .1rem solid rgba(255, 255, 255, 0.18);
+
+}
 .loginForm {
-  max-width: 50%;
+  width: 100%;
 }
 
 .loginForm button {
