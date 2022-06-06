@@ -1,0 +1,80 @@
+/**** Login *****/
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #738bea;
+}
+
+.cardLogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba(0,0,0, 0.2);
+  margin: 15rem;
+  padding: 2rem;
+  backdrop-filter: blur(1rem);
+  background-color: rgba(255, 255, 255, 0.060);
+  border: .1rem solid rgba(255, 255, 255, 0.18);
+
+}
+
+.loginForm {
+  width: 100%;
+}
+
+.loginForm button {
+  width: 100%;
+}
+
+.logoipul24 {
+  width: 200px;
+}
+
+/**** members ***/
+.title-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.table-container,
+.form-container {
+  width: 100%;
+}
+
+.topComponent {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-member {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem 4rem;
+}
+
+.submitBtn {
+  position: absolute;
+  right: 0;
+}
+
+.container-form {
+  position: relative;
+}
+
+.success {
+  padding: 10px;
+  width: fit-content;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

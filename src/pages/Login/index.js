@@ -1,5 +1,6 @@
 import FormLogin from "../../components/form/FormLogin";
 import logo from "../../img/Logo.png";
+import '../../styles/pages.css'
 
 function Login() {
   return (

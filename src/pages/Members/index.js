@@ -5,6 +5,7 @@ import TopComponent from "../../components/navTop/TopComponent";
 import AuthContext from "../../context/AuthContext";
 import { Redirect } from "react-router-dom";
 import useData from "../../hooks/useData";
+import '../../styles/pages.css'
 
 function Members() {
   const { token } = useContext(AuthContext);
