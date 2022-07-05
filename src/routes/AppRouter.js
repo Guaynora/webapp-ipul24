@@ -7,6 +7,7 @@ import Nav from "../components/nav/Nav";
 import AddMember from "../pages/AddMember";
 import AddTithe from "../pages/AddTithe";
 import Info from "../pages/Info";
+import Offering from "../pages/Offering";
 
 function AppRouter() {
   return (
@@ -19,6 +20,7 @@ function AppRouter() {
           <Route exact path="/members/addmember" component={AddMember} />
           <Route exact path="/members" component={Members} />
           <Route exact path="/tithe" component={Tithe} />
+          <Route exact path="/offering" component={Offering} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/" component={Home} />
         </Switch>

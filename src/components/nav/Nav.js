@@ -34,6 +34,14 @@ function Nav() {
             >
               Diezmos
             </NavLink>
+            <NavLink
+              exact
+              to="/offering"
+              activeClassName="active"
+              className="menu-a"
+            >
+             Ofrendas 
+            </NavLink>
           </div>
         </nav>
       )}

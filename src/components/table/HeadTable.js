@@ -12,10 +12,11 @@ function HeadTable({ type }) {
   ];
 
   const tableTithe = ["Nombre", "Apellido", "Monto", "Fecha", "Opcion"];
-
+  const tableOffering = ["Monto"]
   const TypeTable = {
     member: tableMember,
     tithe: tableTithe,
+    offering: tableOffering,
   };
 
   return TypeTable[type].map((el, index) => <th key={index}>{el}</th>);
