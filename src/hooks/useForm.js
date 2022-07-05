@@ -36,15 +36,18 @@ function useForm(initialForm) {
 
   const handleSubmit = (e, type) => {
     e.preventDefault();
+    let sendForm = form
+    if (sendForm?.member === ""){
+      delete sendForm.member
+    }
     console.log(form);
-
     const post = async (type) => {
       try {
         setLoading(true);
         let res = await fetch(urls[type], {
           method: "POST",
           headers,
-          body: JSON.stringify(form),
+          body: JSON.stringify(sendForm),
           signal: controller.signal,
         });
         if (!res.ok) {

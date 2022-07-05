@@ -22,8 +22,8 @@ function RowTable({ data, type }) {
     const { member, date, amount } = data;
     return (
       <>
-        <td>{member.name}</td>
-        <td>{member.lastname}</td>
+        <td>{member?.name || "Desconocido"}</td>
+        <td>{member?.lastname || "Desconocido"}</td>
         <td>{amount}</td>
         <td>{date}</td>
       </>
