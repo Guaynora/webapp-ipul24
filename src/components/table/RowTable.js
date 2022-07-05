@@ -30,9 +30,21 @@ function RowTable({ data, type }) {
     );
   };
 
+  const Offering = () => {
+    const {type, dateOffering, amountOffering} = data;
+    return (
+      <>
+        <td>{type}</td>
+        <td>{dateOffering}</td>
+        <td>{amountOffering}</td>
+      </>
+    )
+  }
+
   const typeData = {
     member: <Member />,
     tithe: <Tithe />,
+    offering: <Offering />,
   };
 
   return (

@@ -12,7 +12,7 @@ function HeadTable({ type }) {
   ];
 
   const tableTithe = ["Nombre", "Apellido", "Monto", "Fecha", "Opcion"];
-  const tableOffering = ["Monto"]
+  const tableOffering = ["Tipo", "Monto", "Fecha", "Opcion"]
   const TypeTable = {
     member: tableMember,
     tithe: tableTithe,
