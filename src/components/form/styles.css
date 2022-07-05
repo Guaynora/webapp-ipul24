@@ -1,0 +1,22 @@
+.container-form {
+  position: relative;
+}
+.form-container {
+  width: 100%;
+}
+
+.form-member {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem 4rem;
+}
+
+.loginForm {
+  width: 100%;
+}
+
+.loginForm button {
+  width: 100%;
+}
+
+
