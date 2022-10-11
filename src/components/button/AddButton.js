@@ -6,7 +6,6 @@ function AddButton({ text }) {
 
   const textButton = {
     miembro: "Agregar miembro",
-    ofrenda: "Agregar ofrenda",
     diezmo: "Agregar diezmo",
     movimiento: "Agregar Movimiento"
   };
@@ -14,7 +13,6 @@ function AddButton({ text }) {
   const pushUrl = {
     miembro: "/members/addmember",
     diezmo: "/tithes/addtithe",
-    ofrenda: "/offering/addoffering",
     movimiento: "/movements/addmovement"
   };
 

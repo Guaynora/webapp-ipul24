@@ -6,9 +6,7 @@ import Tithe from "../pages/Tithe";
 import Nav from "../components/nav/Nav";
 import AddMember from "../pages/Members/AddMember";
 import AddTithe from "../pages/Tithe/AddTithe";
-import AddOffering from "../pages/Offering/AddOffering"
 import Info from "../pages/Info";
-import Offering from "../pages/Offering";
 import Movements from "../pages/Movements/Index";
 import AddMovements from "../pages/Movements/AddMovements";
 
@@ -21,12 +19,10 @@ function AppRouter() {
           <Route exact path="/info/:type/:id" component={Info} />
           <Route exact path="/movements/addmovements" component={AddMovements} />
           <Route exact path="/tithes/addtithe" component={AddTithe} />
-          <Route exact path="/offering/addoffering" component={AddOffering} />
           <Route exact path="/members/addmember" component={AddMember} />
           <Route exact path="/members" component={Members} />
           <Route exact path="/movements" component={Movements} />
           <Route exact path="/tithe" component={Tithe} />
-          <Route exact path="/offering" component={Offering} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/" component={Home} />
         </Switch>
