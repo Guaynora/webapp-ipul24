@@ -9,6 +9,8 @@ import AddTithe from "../pages/Tithe/AddTithe";
 import AddOffering from "../pages/Offering/AddOffering"
 import Info from "../pages/Info";
 import Offering from "../pages/Offering";
+import Movements from "../pages/Movements/Index";
+import AddMovements from "../pages/Movements/AddMovements";
 
 function AppRouter() {
   return (
@@ -17,10 +19,12 @@ function AppRouter() {
         <Nav />
         <Switch>
           <Route exact path="/info/:type/:id" component={Info} />
+          <Route exact path="/movements/addmovements" component={AddMovements} />
           <Route exact path="/tithes/addtithe" component={AddTithe} />
           <Route exact path="/offering/addoffering" component={AddOffering} />
           <Route exact path="/members/addmember" component={AddMember} />
           <Route exact path="/members" component={Members} />
+          <Route exact path="/movements" component={Movements} />
           <Route exact path="/tithe" component={Tithe} />
           <Route exact path="/offering" component={Offering} />
           <Route exact path="/login" component={Login} />
