@@ -30,13 +30,15 @@ function RowTable({ data, type }) {
     );
   };
 
-  const Offering = () => {
-    const {type, dateOffering, amountOffering} = data;
+  const Movement = () => {
+    const {concept, amount, date, description} = data;
     return (
       <>
-        <td>{type}</td>
-        <td>{dateOffering}</td>
-        <td>{amountOffering}</td>
+        <td>{concept.type}</td>
+        <td>{concept.title}</td>
+        <td>{amount}</td>
+        <td>{date}</td>
+        <td>{description}</td>
       </>
     )
   }
@@ -44,7 +46,7 @@ function RowTable({ data, type }) {
   const typeData = {
     member: <Member />,
     tithe: <Tithe />,
-    offering: <Offering />,
+    movement: <Movement />,
   };
 
   return (

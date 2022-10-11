@@ -21,7 +21,7 @@ const Movements = () => {
         <AddButton text="movimiento" />
       </div>
       <div className="table-container p-6">
-        {/* <Table datas={data} type="member" /> */}
+        <Table datas={data} type="movement" />
       </div>
     </section>
   )
