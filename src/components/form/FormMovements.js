@@ -4,12 +4,13 @@ import useForm from "../../hooks/useForm";
 import Message from "../Message";
 
 const initialForm = {
-  type: "",
-  dateOffering: "",
-  amountOffering: 0 
+  descrption: "",
+  amount: 0 ,
+  invoice: null,
+  date: '',
 };
 
-function FormOffering({ data }) {
+function FormMovements({ data }) {
   const { form, loading, response, handleChange, handleSubmit } = useForm(
     initialForm,
     "offering"
@@ -18,7 +19,7 @@ function FormOffering({ data }) {
   return (
     <form className="container-form" onSubmit={(e) => handleSubmit(e, "offering")}>
       <div className="title-button mx-6 mt-4">
-        <h3 className="title is-4 m-0">Agregar Ofrenda</h3>
+        <h3 className="title is-4 m-0">Agregar Movimiento</h3>
         {loading ? <LoadingButton /> : <SubmitButton />}
       </div>
       <div className="form-member form-container p-6">
@@ -28,24 +29,10 @@ function FormOffering({ data }) {
             <input
               className="input"
               type="date"
-              name="dateOffering"
+              name="date"
               onChange={handleChange}
-              value={form.dateOffering}
+              value={form.date}
             />
-          </div>
-        </div>
-        <div className="field">
-          <label className="label">Tipo</label>
-          <div className="select">
-            <select name="type" onChange={handleChange}>
-              <option>Seleccione</option>
-              {data.map((el, id) => (
-                <option
-                  key={id}
-                  value={el.value}
-                >{el.label}</option>
-              ))}
-            </select>
           </div>
         </div>
         <div className="field">
@@ -54,9 +41,21 @@ function FormOffering({ data }) {
             <input
               className="input"
               type="number"
-              name="amountOffering"
+              name="amount"
               onChange={handleChange}
-              value={form.amountOffering}
+              value={form.amount}
+            />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Factura</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              name="invoice"
+              onChange={handleChange}
+              value={form.invoice}
             />
           </div>
         </div>
@@ -66,4 +65,4 @@ function FormOffering({ data }) {
   );
 }
 
-export default FormOffering;
+export default FormMovements;

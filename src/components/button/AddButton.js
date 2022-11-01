@@ -13,7 +13,7 @@ function AddButton({ text }) {
   const pushUrl = {
     miembro: "/members/addmember",
     diezmo: "/tithes/addtithe",
-    movimiento: "/movements/addmovement"
+    movimiento: "/movements/addmovements"
   };
 
   const handleClick = (e) => {
