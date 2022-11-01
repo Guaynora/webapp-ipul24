@@ -42,6 +42,14 @@ function Nav() {
             >
               Movimientos
             </NavLink>
+            <NavLink
+              exact
+              to="/concepts"
+              activeClassName="active"
+              className="menu-a"
+            >
+              Conceptos
+            </NavLink>
           </div>
         </nav>
       )}

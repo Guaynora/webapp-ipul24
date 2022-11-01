@@ -43,10 +43,22 @@ function RowTable({ data, type }) {
     )
   }
 
+  const Concepts = () => {
+    const {type, title, description} = data;
+    return (
+      <>
+        <td>{type}</td>
+        <td>{title}</td>
+        <td>{description}</td>
+      </>
+    )
+  }
+
   const typeData = {
     member: <Member />,
     tithe: <Tithe />,
     movement: <Movement />,
+    concepts: <Concepts />
   };
 
   return (
