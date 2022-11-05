@@ -5,9 +5,10 @@ import Message from "../Message";
 
 const initialForm = {
   descrption: "",
-  amount: 0 ,
+  amount: 0,
   invoice: null,
-  date: '',
+  date: "",
+  concept: null,
 };
 
 function FormMovements({ data }) {
@@ -17,7 +18,10 @@ function FormMovements({ data }) {
   );
 
   return (
-    <form className="container-form" onSubmit={(e) => handleSubmit(e, "offering")}>
+    <form
+      className="container-form"
+      onSubmit={(e) => handleSubmit(e, "movement")}
+    >
       <div className="title-button mx-6 mt-4">
         <h3 className="title is-4 m-0">Agregar Movimiento</h3>
         {loading ? <LoadingButton /> : <SubmitButton />}
@@ -56,6 +60,30 @@ function FormMovements({ data }) {
               name="invoice"
               onChange={handleChange}
               value={form.invoice}
+            />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Concepto</label>
+          <div className="select">
+            <select name="concept" onChange={handleChange}>
+              {data.map((el) => (
+                <option key={el.id} value={el.id}>
+                  {el.title}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Descripción</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              name="description"
+              onChange={handleChange}
+              value={form.description}
             />
           </div>
         </div>

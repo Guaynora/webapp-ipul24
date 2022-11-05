@@ -8,7 +8,7 @@ import useData from '../../hooks/useData';
 const AddMovements = () => {
   const { token } = useContext(AuthContext);
 
-  const { data } = useData("http://localhost:1337/movements");
+  const { data } = useData("http://localhost:1337/concepts");
 
   if (!token) {
     return <Redirect to="/login" />;

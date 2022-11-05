@@ -13,14 +13,14 @@ function useForm(initialForm) {
   const urls = {
     member: "http://localhost:1337/members",
     tithe: "http://localhost:1337/tithes",
-    offering: "http://localhost:1337/offerings",
+    movement: "http://localhost:1337/movements",
     concept: "http://localhost:1337/concepts",
   };
 
   const urlsUpdate = {
     member: `http://localhost:1337/members/${form.id}`,
     tithe: `http://localhost:1337/tithes/${form.id}`,
-    offering: `http://localhost:1337/offerings/${form.id}`,
+    movement: `http://localhost:1337/movements/${form.id}`,
     concept: `http://localhost:1337/concepts/${form.id}`,
   };
 
