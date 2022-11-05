@@ -10,6 +10,7 @@ import Info from "../pages/Info";
 import Movements from "../pages/Movements/Index";
 import AddMovements from "../pages/Movements/AddMovements";
 import Concepts from "../pages/concepts";
+import AddConcepts from "../pages/concepts/AddConcepts";
 
 function AppRouter() {
   return (
@@ -18,6 +19,7 @@ function AppRouter() {
         <Nav />
         <Switch>
           <Route exact path="/info/:type/:id" component={Info} />
+          <Route exact path="/concepts/addconcepts" component={AddConcepts} />
           <Route exact path="/concepts" component={Concepts} />
           <Route exact path="/movements/addmovements" component={AddMovements} />
           <Route exact path="/tithes/addtithe" component={AddTithe} />

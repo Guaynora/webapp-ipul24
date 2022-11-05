@@ -14,12 +14,14 @@ function useForm(initialForm) {
     member: "http://localhost:1337/members",
     tithe: "http://localhost:1337/tithes",
     offering: "http://localhost:1337/offerings",
+    concept: "http://localhost:1337/concepts",
   };
 
   const urlsUpdate = {
     member: `http://localhost:1337/members/${form.id}`,
     tithe: `http://localhost:1337/tithes/${form.id}`,
     offering: `http://localhost:1337/offerings/${form.id}`,
+    concept: `http://localhost:1337/concepts/${form.id}`,
   };
 
   const headers = {
@@ -38,9 +40,9 @@ function useForm(initialForm) {
 
   const handleSubmit = (e, type) => {
     e.preventDefault();
-    let sendForm = form
-    if (sendForm?.member === ""){
-      delete sendForm.member
+    let sendForm = form;
+    if (sendForm?.member === "") {
+      delete sendForm.member;
     }
     console.log(form);
     const post = async (type) => {

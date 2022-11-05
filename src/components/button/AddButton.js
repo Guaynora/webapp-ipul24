@@ -7,13 +7,15 @@ function AddButton({ text }) {
   const textButton = {
     miembro: "Agregar miembro",
     diezmo: "Agregar diezmo",
-    movimiento: "Agregar Movimiento"
+    movimiento: "Agregar Movimiento",
+    concepto: "Agregar Concepto"
   };
 
   const pushUrl = {
     miembro: "/members/addmember",
     diezmo: "/tithes/addtithe",
-    movimiento: "/movements/addmovements"
+    movimiento: "/movements/addmovements",
+    concepto: "/concepts/addconcepts"
   };
 
   const handleClick = (e) => {
