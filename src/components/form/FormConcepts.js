@@ -4,8 +4,8 @@ import useForm from "../../hooks/useForm";
 import Message from "../Message";
 
 const initialForm = {
-  type: "",
-  title: null, 
+  type: "salida",
+  title: null,
   description: null,
 };
 
@@ -21,7 +21,7 @@ function FormConcepts() {
       onSubmit={(e) => handleSubmit(e, "concept")}
     >
       <div className="title-button mx-6 mt-4">
-        <h3 className="title is-4 m-0">Agregar Movimiento</h3>
+        <h3 className="title is-4 m-0">Agregar Concepto</h3>
         {loading ? <LoadingButton /> : <SubmitButton />}
       </div>
       <div className="form-member form-container p-6">
@@ -32,9 +32,7 @@ function FormConcepts() {
               <option value="salida">Salida</option>
               <option value="entrada">Entrada</option>
             </select>
-
           </div>
-          
         </div>
         <div className="field">
           <label className="label">Nombre</label>
