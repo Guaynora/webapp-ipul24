@@ -7,7 +7,6 @@ function FormLogin() {
   const [password, setPassword] = useState("");
 
   const { loading, handleClick, error } = useLogin(email, password);
-  console.log(error);
 
   return (
     <form className="loginForm" onSubmit={handleClick}>
