@@ -15,7 +15,7 @@ function UpdateTithe({ info }) {
   const { form, loading, response, handleChange, handleEdit, handleUpdate } =
     useForm(initialForm, "tithe");
 
-  const { data } = useData("http://localhost:1337/members");
+  const { data } = useData(`${process.env.REACT_APP_APIURL}/members`);
 
   useEffect(() => {
     handleEdit(info);

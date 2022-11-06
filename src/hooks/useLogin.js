@@ -9,7 +9,7 @@ function useLogin(email, password) {
   const { setToken } = useContext(AuthContext);
   let history = useHistory();
 
-  const url = "http://localhost:1337/auth/local";
+  const url = `${process.env.REACT_APP_APIURL}/auth/local`;
 
   const Login = (url, email, password) => {
     setloading(true);

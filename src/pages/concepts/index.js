@@ -10,7 +10,7 @@ import "../../styles/pages.css";
 const Concepts = () => {
   const { token } = useContext(AuthContext);
 
-  const { data } = useData("http://localhost:1337/concepts");
+  const { data } = useData(`${process.env.REACT_APP_APIURL}/concepts`);
 
   if (!token) {
     return <Redirect to="/login" />;

@@ -10,7 +10,7 @@ import "../../styles/pages.css";
 function Members() {
   const { token } = useContext(AuthContext);
 
-  const { data } = useData("http://localhost:1337/members");
+  const { data } = useData(`${process.env.APIURL}/members`);
 
   if (!token) {
     return <Redirect to="/login" />;

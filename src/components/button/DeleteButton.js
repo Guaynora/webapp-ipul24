@@ -7,8 +7,8 @@ function DeleteButton({ type, id }) {
   const [error, setError] = useState(false);
 
   const urls = {
-    member: `http://localhost:1337/members/${id}`,
-    tithe: `http://localhost:1337/tithes/${id}`,
+    member: `${process.env.REACT_APP_APIURL}/members/${id}`,
+    tithe: `${process.env.REACT_APP_APIURL}/tithes/${id}`,
   };
 
   const Delete = (e) => {

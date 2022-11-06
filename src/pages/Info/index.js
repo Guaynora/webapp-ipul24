@@ -7,7 +7,7 @@ import useDataId from "../../hooks/useDataId";
 function Info() {
   let { type, id } = useParams();
   console.log("useParams: ", useParams());
-  let url = "http://localhost:1337";
+  let url = process.env.REACT_APP_APIURL;
 
   const { data } = useDataId(url, type, id);
 

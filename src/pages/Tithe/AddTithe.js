@@ -9,7 +9,7 @@ import useData from "../../hooks/useData";
 function AddTithe() {
   const { token } = useContext(AuthContext);
 
-  const { data } = useData("http://localhost:1337/members");
+  const { data } = useData(`${process.env.REACT_APP_APIURL}/members`);
 
   if (!token) {
     return <Redirect to="/login" />;

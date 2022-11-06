@@ -9,19 +9,19 @@ function useForm(initialForm) {
   const { token } = useContext(AuthContext);
 
   const controller = new AbortController();
-
+  const url = process.env.REACT_APP_APIURL;
   const urls = {
-    member: "http://localhost:1337/members",
-    tithe: "http://localhost:1337/tithes",
-    movement: "http://localhost:1337/movements",
-    concept: "http://localhost:1337/concepts",
+    member: `${url}/members`,
+    tithe: `${url}/tithes`,
+    movement: `${url}/movements`,
+    concept: `${url}/concepts`,
   };
 
   const urlsUpdate = {
-    member: `http://localhost:1337/members/${form.id}`,
-    tithe: `http://localhost:1337/tithes/${form.id}`,
-    movement: `http://localhost:1337/movements/${form.id}`,
-    concept: `http://localhost:1337/concepts/${form.id}`,
+    member: `${url}/members/${form.id}`,
+    tithe: `${url}/tithes/${form.id}`,
+    movement: `${url}/movements/${form.id}`,
+    concept: `${url}/concepts/${form.id}`,
   };
 
   const headers = {

@@ -7,7 +7,7 @@ function useDirections() {
 
   useEffect(() => {
     const getDirections = async () => {
-      let url = "http://localhost:1337/directions";
+      let url = `${process.env.REACT_APP_APIURL}/directions`;
       try {
         let res = await fetch(url, {
           headers: { Authorization: `Bearer ${token}` },
