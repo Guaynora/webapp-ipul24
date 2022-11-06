@@ -9,18 +9,17 @@
   background-color: #738bea;
 }
 
-.cardLogin{
+.cardLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
-  box-shadow: 0 1rem 1rem rgba(0,0,0, 0.2);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
   margin: 15rem;
   padding: 2rem;
   backdrop-filter: blur(1rem);
-  background-color: rgba(255, 255, 255, 0.060);
-  border: .1rem solid rgba(255, 255, 255, 0.18);
-
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 0.1rem solid rgba(255, 255, 255, 0.18);
 }
 
 .logoipul24 {
@@ -69,4 +68,20 @@
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.container-values {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardshow-values {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.title-cardshow {
+  color: #b8b8ba;
+  font-weight: bold;
 }
