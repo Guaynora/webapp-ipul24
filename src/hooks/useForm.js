@@ -15,6 +15,7 @@ function useForm(initialForm) {
     tithe: `${url}/tithes`,
     movement: `${url}/movements`,
     concept: `${url}/concepts`,
+    direction: `${url}/directions`,
   };
 
   const urlsUpdate = {
@@ -22,6 +23,7 @@ function useForm(initialForm) {
     tithe: `${url}/tithes/${form.id}`,
     movement: `${url}/movements/${form.id}`,
     concept: `${url}/concepts/${form.id}`,
+    direction: `${url}/directions/${form.id}`,
   };
 
   const headers = {

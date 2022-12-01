@@ -54,11 +54,21 @@ function RowTable({ data, type }) {
     )
   }
 
+  const Direction = () => {
+    const {directionName} = data;
+    return (
+      <>
+        <td>{directionName}</td>
+        </>
+    )
+  }
+
   const typeData = {
     member: <Member />,
     tithe: <Tithe />,
     movement: <Movement />,
-    concepts: <Concepts />
+    concepts: <Concepts />,
+    direction: <Direction />,
   };
 
   return (

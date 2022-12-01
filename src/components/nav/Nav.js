@@ -52,6 +52,14 @@ function Nav() {
                 >
                   Miembros
                 </NavLink>
+                <NavLink
+                  exact
+                  to="/directions"
+                  activeClassName="active"
+                  className="menu-a"
+                >
+                  Direcciones
+                </NavLink>
               </div>
             </div>
             <div className="custom-dropdown">
