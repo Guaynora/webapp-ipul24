@@ -8,14 +8,16 @@ function AddButton({ text }) {
     miembro: "Agregar miembro",
     diezmo: "Agregar diezmo",
     movimiento: "Agregar Movimiento",
-    concepto: "Agregar Concepto"
+    concepto: "Agregar Concepto",
+    direccion: "Agregar Direcciones",
   };
 
   const pushUrl = {
     miembro: "/members/addmember",
     diezmo: "/tithes/addtithe",
     movimiento: "/movements/addmovements",
-    concepto: "/concepts/addconcepts"
+    concepto: "/concepts/addconcepts",
+    direccion: "/directions/adddirection",
   };
 
   const handleClick = (e) => {
