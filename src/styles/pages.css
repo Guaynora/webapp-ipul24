@@ -85,3 +85,20 @@
   color: #b8b8ba;
   font-weight: bold;
 }
+
+.container-charts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.el-chart {
+  text-align: center;
+}
+
+.elementChart {
+  max-width: 400;
+  max-height: 400;
+  border: 2px solid red;
+}
