@@ -34,7 +34,7 @@ const Movements = () => {
         </div>
         <div className="cardshow-values">
           <p className="title-cardshow">Ingreso restante</p>
-          <p>{totalMovements.data.total - totalMovements.data.total_output}</p>
+          <p>{totalMovements.data.remainingIncome}</p>
         </div>
       </div>
       <div className="table-container p-6">

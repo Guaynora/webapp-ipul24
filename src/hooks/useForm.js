@@ -110,6 +110,10 @@ function useForm(initialForm) {
   };
 
   useEffect(() => {
+    setForm(initialForm);
+  }, [initialForm]);
+
+  useEffect(() => {
     console.log("useEffect useForm");
     if (edit.length !== 0) {
       setForm(edit);

@@ -2,20 +2,27 @@ import SubmitButton from "../button/SubmitButton";
 import LoadingButton from "../button/LoadingButton";
 import useForm from "../../hooks/useForm";
 import Message from "../Message";
-
-const initialForm = {
-  descrption: "",
-  amount: 0,
-  invoice: null,
-  date: "",
-  concept: null,
-};
+import { useEffect, useState } from "react";
 
 function FormMovements({ data }) {
+  const [initialForm, setInitialForm] = useState({
+    description: "",
+    amount: 0,
+    invoice: null,
+    date: "",
+    concept: "",
+  });
+
   const { form, loading, response, handleChange, handleSubmit } = useForm(
     initialForm,
-    "offering"
+    "movement"
   );
+
+  useEffect(() => {
+    if (data.length > 0) {
+      setInitialForm({ ...initialForm, concept: data[0].id });
+    }
+  }, [data]);
 
   return (
     <form

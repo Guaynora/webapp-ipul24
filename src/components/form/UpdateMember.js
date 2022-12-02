@@ -24,7 +24,6 @@ function UpdateMember({ info }) {
   const { directions } = useDirections();
 
   useEffect(() => {
-    console.log("useEffect updateMember");
     handleEdit(info);
   }, [info]);
 
